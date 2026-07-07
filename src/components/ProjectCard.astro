@@ -1,0 +1,45 @@
+---
+export interface Props {
+  project: {
+    id: string;
+    title: string;
+    description: string;
+    tags: string[];
+    image?: string;
+    liveUrl?: string;
+    githubUrl?: string;
+    featured?: boolean;
+    year: number;
+  };
+  featured?: boolean;
+}
+
+const { project, featured } = Astro.props;
+---
+
+<div class="group border border-gray-200 dark:border-gray-700 rounded-xl p-6 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300">
+  <div class="flex items-start justify-between mb-3">
+    <h3 class="font-semibold text-lg">{project.title}</h3>
+    {featured && <span class="text-xs bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded-full">精选</span>}
+  </div>
+  <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">{project.description}</p>
+  
+  <div class="flex flex-wrap gap-2 mb-4">
+    {project.tags.map(tag => (
+      <span class="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-2 py-1 rounded">
+        {tag}
+      </span>
+    ))}
+  </div>
+
+  <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+    {project.liveUrl && (
+      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"
+         class="text-xs text-blue-600 hover:underline">在线演示 →</a>
+    )}
+    {project.githubUrl && (
+      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"
+         class="text-xs text-gray-500 hover:underline">源代码 →</a>
+    )}
+  </div>
+</div>
