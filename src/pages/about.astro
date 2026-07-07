@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="关于我" description="个人简历 / 关于我">
+  <div class="max-w-3xl mx-auto px-4 py-16">
+    <!-- 个人信息 -->
+    <div class="flex flex-col md:flex-row items-start gap-8 mb-16">
+      <div class="w-32 h-32 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white text-4xl font-bold shrink-0">
+        你
+      </div>
+      <div>
+        <h1 class="text-3xl font-bold">你的名字</h1>
+        <p class="text-gray-600 dark:text-gray-400 mt-1">全栈开发者 · 设计师</p>
+        <p class="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+          热爱技术，喜欢创造。6 年+ 开发经验，擅长 Vue 生态、Python 后端和 AI 应用开发。
+        </p>
+        <a href="/resume.pdf" 
+           class="inline-block mt-4 px-6 py-2.5 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition font-medium" download>
+          📄 下载简历 PDF
+        </a>
+      </div>
+    </div>
+
+    <!-- 工作经历 -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-8">💼 工作经历</h2>
+      <div class="space-y-8">
+        <div class="border-l-4 border-blue-500 pl-4">
+          <h3 class="text-xl font-semibold">公司名称</h3>
+          <p class="text-gray-500 text-sm">2024 - 至今</p>
+          <p class="mt-2 text-gray-700 dark:text-gray-300 leading-relaxed">
+            负责前端架构设计与核心功能开发……
+          </p>
+        </div>
+        <div class="border-l-4 border-gray-300 dark:border-gray-600 pl-4">
+          <h3 class="text-xl font-semibold">前公司名称</h3>
+          <p class="text-gray-500 text-sm">2020 - 2024</p>
+          <p class="mt-2 text-gray-700 dark:text-gray-300 leading-relaxed">
+            参与多个项目的前后端开发……
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技能 -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6">🛠️ 技能</h2>
+      <div class="flex flex-wrap gap-3">
+        {['JavaScript', 'TypeScript', 'Vue', 'React', 'Python', 'Node.js', 'Docker', 'PostgreSQL', 'Git', 'Tailwind CSS'].map(skill => (
+          <span class="px-4 py-2 bg-gray-100 dark:bg-slate-800 rounded-full text-sm font-medium hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-700 dark:hover:text-blue-300 transition cursor-default">
+            {skill}
+          </span>
+        ))}
+      </div>
+    </section>
+
+    <!-- 教育 -->
+    <section>
+      <h2 class="text-2xl font-bold mb-6">🎓 教育</h2>
+      <div class="border-l-4 border-gray-300 dark:border-gray-600 pl-4">
+        <h3 class="text-xl font-semibold">大学名称</h3>
+        <p class="text-gray-500 text-sm">2016 - 2020 · 计算机科学与技术</p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
