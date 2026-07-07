@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { projects } from '../data/projects';
+
+const featured = projects.filter(p => p.featured);
+const others = projects.filter(p => !p.featured);
+---
+
+<BaseLayout title="作品集" description="我的项目作品集">
+  <div class="max-w-6xl mx-auto px-4 py-16">
+    <h1 class="text-4xl font-bold mb-4">💼 作品集</h1>
+    <p class="text-gray-600 dark:text-gray-400 mb-12">这里展示了一些我做过或参与的项目</p>
+
+    {featured.length > 0 && (
+      <>
+        <h2 class="text-2xl font-semibold mb-6">✨ 精选项目</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+          {featured.map(project => <ProjectCard project={project} featured />)}
+        </div>
+      </>
+    )}
+
+    <h2 class="text-2xl font-semibold mb-6">📂 其他项目</h2>
+    {others.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {others.map(project => <ProjectCard project={project} />)}
+      </div>
+    ) : (
+      <p class="text-gray-400 text-center py-12">更多项目准备中……</p>
+    )}
+  </div>
+</BaseLayout>
