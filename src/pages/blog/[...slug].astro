@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<BaseLayout title={post.data.title} description={post.data.description}>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <header class="mb-10">
+      <h1 class="text-4xl font-bold mb-4 leading-tight">{post.data.title}</h1>
+      <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+        <time>{post.data.pubDate.toLocaleDateString('zh-CN', {year:'numeric',month:'long',day:'numeric'})}</time>
+        {post.data.updatedDate && (
+          <span>（更新于 {post.data.updatedDate.toLocaleDateString('zh-CN')}）</span>
+        )}
+        <div class="flex gap-2">
+          {post.data.tags.map(tag => (
+            <span class="bg-gray-100 dark:bg-slate-800 px-2 py-0.5 rounded text-xs">#{tag}</span>
+          ))}
+        </div>
+      </div>
+    </header>
+    
+    <div class="prose prose-gray dark:prose-invert max-w-none leading-relaxed">
+      <Content />
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
+      <a href="/blog" class="text-blue-600 hover:underline">← 返回博客列表</a>
+    </div>
+  </article>
+</BaseLayout>
