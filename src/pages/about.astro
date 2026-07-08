@@ -2,56 +2,129 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="关于我" description="个人简历 / 关于我">
+<BaseLayout title="关于我" description="张钰泽 · AI 应用开发 / 企业智能化落地 · 16 年企业数字化深耕">
   <div class="max-w-3xl mx-auto px-4 py-16">
     <!-- 个人信息 -->
     <div class="flex flex-col md:flex-row items-start gap-8 mb-16">
       <div class="w-32 h-32 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white text-4xl font-bold shrink-0">
-        你
+        张
       </div>
       <div>
-        <h1 class="text-3xl font-bold">你的名字</h1>
-        <p class="text-gray-600 dark:text-gray-400 mt-1">全栈开发者 · 设计师</p>
+        <h1 class="text-3xl font-bold">张钰泽</h1>
+        <p class="text-gray-600 dark:text-gray-400 mt-1">AI 应用开发 / 企业智能化落地</p>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">📧 3239685@qq.com  ·  📍 深圳南山</p>
         <p class="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed">
-          热爱技术，喜欢创造。6 年+ 开发经验，擅长 Vue 生态、Python 后端和 AI 应用开发。
+          16 年企业数字化深耕，从 OA 实施到万级用户系统运维，近 2 年深入 AI Agent 实战开发。
+          熟练使用 AI Agent 进行编码、调试、部署，独立交付鸿蒙原生应用并通过华为应用市场审核。
+          前端 Vue/ArkUI + 后端 Java/Spring Boot + 移动端鸿蒙 + 运维 Linux，一个人能从需求分析干到上线。
         </p>
-        <a href="/resume.pdf" 
-           class="inline-block mt-4 px-6 py-2.5 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition font-medium" download>
-          📄 下载简历 PDF
-        </a>
       </div>
     </div>
+
+    <!-- AI 与开发能力 -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-6">🤖 AI 与开发能力</h2>
+      <div class="space-y-4">
+        <div class="flex flex-wrap gap-2">
+          {[
+            { name: 'AI Agent 开发', desc: 'Hermes Agent / Claude Code，全流程 AI 辅助开发，Prompt Engineering' },
+            { name: '知识库工程', desc: 'LLM Wiki + Obsidian 知识图谱，文档自动解析与结构化' },
+            { name: '鸿蒙开发', desc: 'ArkTS + ArkUI，独立 App 从零到上架全流程' },
+            { name: '前端开发', desc: 'Vue 3 / TypeScript / Tailwind CSS / Astro' },
+            { name: '后端开发', desc: 'Java / Spring Boot，RESTful API 设计' },
+            { name: 'AI 工具链', desc: 'DeepSeek API、GitHub Actions CI/CD、EdgeOne Pages' },
+          ].map(item => (
+            <div class="w-full md:w-[calc(50%-0.5rem)] bg-gray-50 dark:bg-slate-800 rounded-xl p-4">
+              <h3 class="font-semibold text-blue-600 dark:text-blue-400">{item.name}</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- AI 相关项目 -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-8">🚀 AI 相关项目</h2>
+      <div class="space-y-8">
+        <!-- MemoApp -->
+        <div class="border-l-4 border-blue-500 pl-4">
+          <h3 class="text-xl font-semibold">好记（MemoApp）— 鸿蒙原生备忘录</h3>
+          <p class="text-gray-500 text-sm mt-1">HarmonyOS · ArkTS · ArkUI · 语音识别  |  已上架华为应用市场</p>
+          <ul class="mt-2 space-y-1 text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
+            <li>独立完成需求分析、架构设计、编码实现全流程</li>
+            <li>实现离线语音录入、中文 NLP 时间解析、三层提醒系统（系统级 + 通知栏 + 弹窗）</li>
+            <li>适配手机、平板、折叠屏全设备，支持深浅模式</li>
+            <li>通过华为应用市场 UX 审核，解决 7 处运行时崩溃问题</li>
+            <li>全程 AI Agent 辅助开发（AI 生成 → 人工审查 → 调试验证）</li>
+          </ul>
+        </div>
+
+        <!-- AI Knowledge Base -->
+        <div class="border-l-4 border-purple-500 pl-4">
+          <h3 class="text-xl font-semibold">AI 个人知识库系统</h3>
+          <p class="text-gray-500 text-sm mt-1">LLM Wiki · Obsidian · Markdown · 知识图谱</p>
+          <ul class="mt-2 space-y-1 text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
+            <li>基于 Karpathy LLM Wiki 模式搭建个人知识管理平台</li>
+            <li>AI Agent 自动导入文档、生成交叉引用、维护内容索引</li>
+            <li>支持 Obsidian 图形化浏览，所有页面通过 wikilink 关联</li>
+          </ul>
+        </div>
+
+        <!-- Personal Website -->
+        <div class="border-l-4 border-green-500 pl-4">
+          <h3 class="text-xl font-semibold">个人网站（okze.cn）</h3>
+          <p class="text-gray-500 text-sm mt-1">Astro · Tailwind CSS · Vue 3 · TypeScript</p>
+          <ul class="mt-2 space-y-1 text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
+            <li>从零搭建个人博客与作品集站点</li>
+            <li>GitHub Actions 自动构建 + EdgeOne Pages 部署</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
     <!-- 工作经历 -->
     <section class="mb-16">
       <h2 class="text-2xl font-bold mb-8">💼 工作经历</h2>
       <div class="space-y-8">
         <div class="border-l-4 border-blue-500 pl-4">
-          <h3 class="text-xl font-semibold">公司名称</h3>
-          <p class="text-gray-500 text-sm">2024 - 至今</p>
-          <p class="mt-2 text-gray-700 dark:text-gray-300 leading-relaxed">
-            负责前端架构设计与核心功能开发……
-          </p>
+          <h3 class="text-xl font-semibold">联想集团 · 深圳能源</h3>
+          <p class="text-gray-500 text-sm">2020.08 - 至今  |  OA 系统运维工程师  |  10000+ 用户，6 台服务器集群</p>
+          <ul class="mt-2 space-y-1 text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
+            <li>主导 OA 系统从 IBM Domino 向 Java 架构（蓝凌 EKP-J V15）迁移</li>
+            <li>建立分级故障响应机制，日常问题闭环率 99%，系统全年可用率 99.9%</li>
+            <li>实现 OA 与 SAP 系统集成对接，组织架构、审批流程数据双向同步</li>
+            <li>针对慢查询、高并发瓶颈进行 SQL 优化与服务器调优</li>
+          </ul>
         </div>
-        <div class="border-l-4 border-gray-300 dark:border-gray-600 pl-4">
-          <h3 class="text-xl font-semibold">前公司名称</h3>
-          <p class="text-gray-500 text-sm">2020 - 2024</p>
-          <p class="mt-2 text-gray-700 dark:text-gray-300 leading-relaxed">
-            参与多个项目的前后端开发……
-          </p>
-        </div>
-      </div>
-    </section>
 
-    <!-- 技能 -->
-    <section class="mb-16">
-      <h2 class="text-2xl font-bold mb-6">🛠️ 技能</h2>
-      <div class="flex flex-wrap gap-3">
-        {['JavaScript', 'TypeScript', 'Vue', 'React', 'Python', 'Node.js', 'Docker', 'PostgreSQL', 'Git', 'Tailwind CSS'].map(skill => (
-          <span class="px-4 py-2 bg-gray-100 dark:bg-slate-800 rounded-full text-sm font-medium hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-700 dark:hover:text-blue-300 transition cursor-default">
-            {skill}
-          </span>
-        ))}
+        <div class="border-l-4 border-gray-300 dark:border-gray-600 pl-4">
+          <h3 class="text-xl font-semibold">鹏华基金 · 经营分析系统开发</h3>
+          <p class="text-gray-500 text-sm">2019.06 - 2020.08  |  全栈开发  |  Vue.js + Spring Boot + Oracle</p>
+          <ul class="mt-2 space-y-1 text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
+            <li>从零搭建数据可视化分析平台，覆盖费用分析、利润分析、公司对标模块</li>
+            <li>负责前后端开发及 Kettle ETL 数据抽取，独立完成需求到上线</li>
+          </ul>
+        </div>
+
+        <div class="border-l-4 border-gray-300 dark:border-gray-600 pl-4">
+          <h3 class="text-xl font-semibold">鹏华基金 · 差旅系统集成</h3>
+          <p class="text-gray-500 text-sm">2017.05 - 2017.06  |  项目经理/开发工程师</p>
+          <ul class="mt-2 space-y-1 text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
+            <li>主导 OA 与携程、优行差旅平台 API 集成对接，实现单点登录与审批单自动推送</li>
+            <li>独立完成需求沟通、接口开发、测试上线全流程</li>
+          </ul>
+        </div>
+
+        <div class="border-l-4 border-gray-300 dark:border-gray-600 pl-4">
+          <h3 class="text-xl font-semibold">蓝凌股份 · 国信证券 OA 战略项目</h3>
+          <p class="text-gray-500 text-sm">2012.07 - 2016.08  |  项目经理/实施工程师  |  5 期迭代</p>
+          <ul class="mt-2 space-y-1 text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
+            <li>担任国信证券 OA 项目负责人，主导 5 期系统迭代实施</li>
+            <li>覆盖流程、门户、知识管理、邮件等核心模块</li>
+            <li>带领现场团队适配证券行业合规需求，客户满意度 95%+</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -59,8 +132,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <section>
       <h2 class="text-2xl font-bold mb-6">🎓 教育</h2>
       <div class="border-l-4 border-gray-300 dark:border-gray-600 pl-4">
-        <h3 class="text-xl font-semibold">大学名称</h3>
-        <p class="text-gray-500 text-sm">2016 - 2020 · 计算机科学与技术</p>
+        <h3 class="text-xl font-semibold">英国密德萨斯大学</h3>
+        <p class="text-gray-500 text-sm">2005 - 2009 · 计算机科学学士</p>
+        <p class="mt-2 text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+          主修：面向对象系统分析与设计、人机交互、数据库管理系统、互联网与 Web 技术等
+        </p>
       </div>
     </section>
   </div>
