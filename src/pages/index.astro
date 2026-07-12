@@ -8,7 +8,7 @@ const latestPosts = (await getCollection('blog'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3);
 
-const featuredProjects = projects.filter(p => p.featured).slice(0, 3);
+const featuredProjects = projects.filter(p => p.featured).slice(0, 4);
 ---
 
 <BaseLayout title="首页" description="个人网站 - 博客、作品集、简历">
@@ -17,11 +17,11 @@ const featuredProjects = projects.filter(p => p.featured).slice(0, 3);
     <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
       你好，我是
       <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-        你的名字
+        张钰泽
       </span>
     </h1>
     <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8 leading-relaxed">
-      全栈开发者 / 设计师。热爱创造，喜欢用代码把想法变成现实。
+      AI 应用工程师。热爱创造，喜欢用代码把想法变成现实。
     </p>
     <div class="flex justify-center gap-4 flex-wrap">
       <a href="/projects" 
