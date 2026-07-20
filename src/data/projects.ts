@@ -8,6 +8,10 @@ export interface Project {
   githubUrl?: string;
   featured?: boolean;
   year: number;
+  /** 进化版本标识 (v1/v2/v3) */
+  version?: string;
+  /** 进化到的下一个项目 title */
+  evolvedTo?: string;
 }
 
 export const projects: Project[] = [
@@ -27,20 +31,35 @@ export const projects: Project[] = [
     featured: true,
     year: 2026,
   },
+  // ── RAG 进化三部曲 ────────────────────────────────
   {
     id: 'local-llm',
     title: '本地大模型部署',
-    description: 'RTX 5090D 32GB 部署 qwen3:32b，Ollama + Hermes Agent 实现本地推理，搭配 RAG 知识库',
-    tags: ['Ollama', 'Hermes Agent', 'LLM', 'RAG', 'GPU'],
-    featured: true,
+    description: 'RTX 5090D 32GB 部署 qwen3.6:35b MoE（存算分离架构），Ollama 开放外部推理 API，搭配 Hermes Agent 智能体',
+    tags: ['Ollama', 'GPU', 'MoE', 'LLM'],
+    featured: false,
     year: 2026,
+    version: 'v1',
+    evolvedTo: 'AI 个人知识库 (RAG)',
   },
   {
     id: 'ai-knowledge-base',
     title: 'AI 个人知识库 (RAG)',
-    description: '基于 LlamaIndex + BGE-M3 + Qdrant 构建的本地 RAG 知识库系统，Docker 部署，端到端可查询',
-    tags: ['LlamaIndex', 'BGE-M3', 'Qdrant', 'Docker', 'RAG'],
+    description: '基于 LLamaIndex + BGE-M3 + Qdrant 的端到端 RAG 原型，Docker 部署，完成从零到检索问答的全链路验证',
+    tags: ['LLamaIndex', 'BGE-M3', 'Qdrant', 'Docker', 'RAG'],
     featured: false,
     year: 2026,
+    version: 'v2',
+    evolvedTo: 'Personal RAG Platform',
+  },
+  {
+    id: 'personal-rag-platform',
+    title: 'Personal RAG Platform',
+    description: '企业级私有化 RAG 知识库平台 — FastAPI + LangChain + Qdrant 存算分离架构，模块化 ingest pipeline + RESTful API，已通过全链路试跑验证',
+    tags: ['FastAPI', 'LangChain', 'Qdrant', 'Ollama', 'RAG', 'MLOps'],
+    githubUrl: 'https://github.com/okze-521/personal-rag-platform',
+    featured: true,
+    year: 2026,
+    version: 'v3',
   },
 ];
