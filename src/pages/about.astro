@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="关于我" description="张钰泽 · AI 应用开发 / 企业智能化落地 · 16 年企业数字化深耕">
+<BaseLayout title="关于我" description="张钰泽 · AI 应用工程师 / 企业智能化落地 · 16 年企业数字化深耕">
   <div class="max-w-3xl mx-auto px-4 py-16">
     <!-- 个人信息 -->
     <div class="flex flex-col md:flex-row items-start gap-8 mb-16">
@@ -11,7 +11,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
       <div>
         <h1 class="text-3xl font-bold">张钰泽</h1>
-        <p class="text-gray-600 dark:text-gray-400 mt-1">AI 应用开发 / 企业智能化落地</p>
+        <p class="text-gray-600 dark:text-gray-400 mt-1">AI 应用工程师 / 企业智能化落地</p>
         <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">📧 3239685@qq.com  ·  📍 深圳南山</p>
         <p class="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed">
           16 年企业数字化深耕，从 OA 实施到万级用户系统运维，近 2 年深入 AI Agent 实战开发。
@@ -28,7 +28,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="flex flex-wrap gap-2">
           {[
             { name: 'AI Agent 开发', desc: 'Hermes Agent / Claude Code，全流程 AI 辅助开发，Prompt Engineering' },
-            { name: '知识库工程', desc: 'LLM Wiki + Obsidian 知识图谱，文档自动解析与结构化' },
+            { name: 'RAG 系统工程', desc: 'FastAPI + LangChain + Qdrant + Ollama，存算分离架构' },
+            { name: '知识库工程', desc: '文档 Pipeline、向量检索、Docker Compose 服务编排' },
             { name: '鸿蒙开发', desc: 'ArkTS + ArkUI，独立 App 从零到上架全流程' },
             { name: '前端开发', desc: 'Vue 3 / TypeScript / Tailwind CSS / Astro' },
             { name: '后端开发', desc: 'Java / Spring Boot，RESTful API 设计' },
@@ -60,14 +61,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </ul>
         </div>
 
-        <!-- AI Knowledge Base -->
+        <!-- Personal RAG Platform -->
         <div class="border-l-4 border-purple-500 pl-4">
-          <h3 class="text-xl font-semibold">AI 个人知识库系统</h3>
-          <p class="text-gray-500 text-sm mt-1">LLM Wiki · Obsidian · Markdown · 知识图谱</p>
+          <h3 class="text-xl font-semibold">Personal RAG Platform — 私有化 RAG 知识库平台</h3>
+          <p class="text-gray-500 text-sm mt-1">FastAPI · LangChain · Qdrant · Ollama · BGE-M3 · Docker</p>
           <ul class="mt-2 space-y-1 text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
-            <li>基于 Karpathy LLM Wiki 模式搭建个人知识管理平台</li>
-            <li>AI Agent 自动导入文档、生成交叉引用、维护内容索引</li>
-            <li>支持 Obsidian 图形化浏览，所有页面通过 wikilink 关联</li>
+            <li>存算分离架构：笔记本 Qdrant + BGE-M3 / 台式机 RTX 5090D Ollama MoE 推理</li>
+            <li>完整文档导入 Pipeline：document_loader → chunker → embedder → Qdrant，CLI 一键导入</li>
+            <li>FastAPI RESTful 服务 + LangChain 编排 RAG 链路，全链路试跑验证通过</li>
+            <li>工程化标准：Pydantic-settings / Docker Compose / 模块化 src 目录 / 完整类型注解</li>
+            <li><a href="https://github.com/okze-521/personal-rag-platform" class="text-blue-600 underline" target="_blank">GitHub 开源 →</a></li>
           </ul>
         </div>
 
