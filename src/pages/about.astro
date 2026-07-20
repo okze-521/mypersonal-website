@@ -68,8 +68,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <ul class="mt-2 space-y-1 text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
             <li>存算分离架构：笔记本 Qdrant + BGE-M3 / 台式机 RTX 5090D Ollama MoE 推理</li>
             <li>完整文档导入 Pipeline：document_loader → chunker → embedder → Qdrant，CLI 一键导入</li>
-            <li>FastAPI RESTful 服务 + LangChain 编排 RAG 链路，全链路试跑验证通过</li>
-            <li>工程化标准：Pydantic-settings / Docker Compose / 模块化 src 目录 / 完整类型注解</li>
+            <li>FastAPI RESTful 服务 + LangChain 编排 RAG 链路</li>
+            <li><strong>全链路端到端验证通过</strong>：Embed → Search → Generate，台式机 MoE 真实推理</li>
+            <li>ChatGPT 风格聊天界面 (chat.html)，单文件零依赖，实时状态检测 + 来源展开</li>
             <li><a href="https://github.com/okze-521/personal-rag-platform" class="text-blue-600 underline" target="_blank">GitHub 开源 →</a></li>
           </ul>
         </div>
