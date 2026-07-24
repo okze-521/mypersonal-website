@@ -27,13 +27,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="space-y-4">
         <div class="flex flex-wrap gap-2">
           {[
-            { name: 'AI Agent 开发', desc: 'Hermes Agent / Claude Code，全流程 AI 辅助开发，Prompt Engineering' },
-            { name: 'RAG 系统工程', desc: 'FastAPI + LangChain + Qdrant + Ollama，存算分离架构' },
-            { name: '知识库工程', desc: '文档 Pipeline、向量检索、Docker Compose 服务编排' },
-            { name: '鸿蒙开发', desc: 'ArkTS + ArkUI，独立 App 从零到上架全流程' },
+            { name: 'AI Agent 开发', desc: 'Hermes Agent / Claude Code，全流程 AI 辅助开发，Prompt Engineering，Multi-Agent 协作' },
+            { name: 'RAG 系统工程', desc: 'FastAPI + LangChain + Qdrant + Ollama，存算分离架构，BGE-Reranker 精排' },
+            { name: 'Python 工程化', desc: 'async/await 异步编程，pytest TDD 测试驱动，uv 包管理，111 tests · 89% 覆盖率' },
+            { name: 'MLOps 工具链', desc: 'Docker Compose 服务编排，Qdrant 向量数据库运维，ModelScope 模型管理' },
+            { name: '鸿蒙开发', desc: 'ArkTS + ArkUI，独立 App 从零到上架华为应用市场全流程' },
             { name: '前端开发', desc: 'Vue 3 / TypeScript / Tailwind CSS / Astro' },
-            { name: '后端开发', desc: 'Java / Spring Boot，RESTful API 设计' },
-            { name: 'AI 工具链', desc: 'DeepSeek API、GitHub Actions CI/CD、EdgeOne Pages' },
+            { name: '后端开发', desc: 'Python / FastAPI / Java / Spring Boot，RESTful API 设计与开发' },
+            { name: '本地 LLM 部署', desc: 'Ollama 本地推理，MoE 模型 (qwen3.6:35b)，GPU 资源管理' },
           ].map(item => (
             <div class="w-full md:w-[calc(50%-0.5rem)] bg-gray-50 dark:bg-slate-800 rounded-xl p-4">
               <h3 class="font-semibold text-blue-600 dark:text-blue-400">{item.name}</h3>
@@ -72,6 +73,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li>存算分离拓扑：笔记本 Qdrant + BGE-M3 / 台式机 RTX 5090D Ollama MoE</li>
             <li>ChatGPT 风格聊天界面 (chat.html)，单文件零依赖</li>
             <li><a href="https://github.com/okze-521/personal-rag-platform" class="text-blue-600 underline" target="_blank">GitHub 开源 →</a></li>
+          </ul>
+        </div>
+
+        <!-- Smart Doc Analyzer -->
+        <div class="border-l-4 border-orange-500 pl-4">
+          <h3 class="text-xl font-semibold">Smart Doc Analyzer — 企业文档智能分析平台</h3>
+          <p class="text-gray-500 text-sm mt-1">FastAPI · Qdrant · BGE-M3 · Ollama · TDD</p>
+          <ul class="mt-2 space-y-1 text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
+            <li>15 天六阶段 TDD 开发，111 tests · 89% 代码覆盖率</li>
+            <li>支持 PDF/DOCX/XLSX 多格式解析、语义边界切片、RAG 向量检索问答</li>
+            <li>文档对比 (difflib+LLM) + 自动分类 (7 大类别，BGE 向量相似度)</li>
+            <li>JWT 认证 + RBAC 权限 + 审计日志，完整企业级安全模型</li>
+            <li>LLM 默认本地 Ollama (<span class="text-orange-600">🔒 隐私保护</span>)，文档不上云</li>
+            <li><a href="https://github.com/okze-521/smart-doc-analyzer" class="text-blue-600 underline" target="_blank">GitHub 开源 →</a></li>
           </ul>
         </div>
 
