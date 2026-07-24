@@ -55,8 +55,8 @@ export const projects: Project[] = [
   {
     id: 'personal-rag-platform',
     title: 'Personal RAG Platform',
-    description: '企业级私有化 RAG 知识库平台 — FastAPI + LangChain + Qdrant 存算分离架构，模块化 ingest pipeline + RESTful API，已通过全链路试跑验证',
-    tags: ['FastAPI', 'LangChain', 'Qdrant', 'Ollama', 'RAG', 'MLOps'],
+    description: '企业级私有化 RAG 知识库平台 v2.0 — FastAPI + LangChain 异步架构，5步链路（Embed → Search → Rerank → Prompt → LLM），BGE-Reranker 精排 + 降级容错，存算分离本地运行',
+    tags: ['FastAPI', 'LangChain', 'Qdrant', 'Ollama', 'Reranker', 'RAG', 'MLOps'],
     githubUrl: 'https://github.com/okze-521/personal-rag-platform',
     featured: true,
     year: 2026,
