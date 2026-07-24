@@ -62,4 +62,13 @@ export const projects: Project[] = [
     year: 2026,
     version: 'v3',
   },
+  {
+    id: 'smart-doc-analyzer',
+    title: 'Smart Doc Analyzer',
+    description: '企业文档智能分析平台 — FastAPI + Qdrant 向量检索，支持 PDF/DOCX/XLSX 解析、语义 RAG 问答、文档对比与自动分类，111 tests · 89% 覆盖率，TDD 全流程开发',
+    tags: ['FastAPI', 'Qdrant', 'RAG', 'TDD', 'Ollama', 'MLOps'],
+    githubUrl: 'https://github.com/okze-521/smart-doc-analyzer',
+    featured: true,
+    year: 2026,
+  },
 ];
