@@ -66,11 +66,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h3 class="text-xl font-semibold">Personal RAG Platform — 私有化 RAG 知识库平台</h3>
           <p class="text-gray-500 text-sm mt-1">FastAPI · LangChain · Qdrant · Ollama · BGE-M3 · Docker</p>
           <ul class="mt-2 space-y-1 text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
-            <li>存算分离架构：笔记本 Qdrant + BGE-M3 / 台式机 RTX 5090D Ollama MoE 推理</li>
-            <li>完整文档导入 Pipeline：document_loader → chunker → embedder → Qdrant，CLI 一键导入</li>
-            <li>FastAPI RESTful 服务 + LangChain 编排 RAG 链路</li>
-            <li><strong>全链路端到端验证通过</strong>：Embed → Search → Generate，台式机 MoE 真实推理</li>
-            <li>ChatGPT 风格聊天界面 (chat.html)，单文件零依赖，实时状态检测 + 来源展开</li>
+            <li>5步 RAG 链路：Embed → Search → Rerank → Prompt → LLM，BGE-Reranker-v2-m3 精排</li>
+            <li>全链路异步 (httpx async/await)，不阻塞事件循环，支持高并发</li>
+            <li>降级容错：Reranker 失败自动回退原始检索，LLM 断连回退云端 DeepSeek</li>
+            <li>存算分离拓扑：笔记本 Qdrant + BGE-M3 / 台式机 RTX 5090D Ollama MoE</li>
+            <li>ChatGPT 风格聊天界面 (chat.html)，单文件零依赖</li>
             <li><a href="https://github.com/okze-521/personal-rag-platform" class="text-blue-600 underline" target="_blank">GitHub 开源 →</a></li>
           </ul>
         </div>
@@ -95,10 +95,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h3 class="text-xl font-semibold">联想集团 · 深圳能源</h3>
           <p class="text-gray-500 text-sm">2020.08 - 至今  |  OA 系统运维工程师  |  10000+ 用户，从6台服务器集群升级为2台Nginx+14台应用+3台SQL+3台Redis服务器大集群</p>
           <ul class="mt-2 space-y-1 text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
-            <li>主导 OA 系统从 IBM Domino 向 Java 架构（蓝凌 EKP-J V15）迁移</li>
+            <li>OA 系统从 IBM Domino 向 Java 架构（蓝凌 EKP-J V15）迁移</li>
             <li>建立分级故障响应机制，日常问题闭环率 99%，系统全年可用率 99.9%</li>
             <li>实现 OA 与 SAP 系统集成对接，组织架构、审批流程数据双向同步</li>
             <li>针对慢查询、高并发瓶颈进行 SQL 优化与服务器调优</li>
+            <li>分析解决用户的各种需求和问题，客户满意度</li>
           </ul>
         </div>
 
@@ -115,7 +116,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h3 class="text-xl font-semibold">鹏华基金 · 差旅系统集成</h3>
           <p class="text-gray-500 text-sm">2017.05 - 2017.06  |  项目经理/开发工程师</p>
           <ul class="mt-2 space-y-1 text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
-            <li>主导 OA 与携程、优行差旅平台 API 集成对接，实现单点登录与审批单自动推送</li>
+            <li>主导 泛微OA 与携程、优行差旅平台 API 集成对接，实现单点登录与审批单自动推送</li>
             <li>独立完成需求沟通、接口开发、测试上线全流程</li>
           </ul>
         </div>
@@ -124,7 +125,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h3 class="text-xl font-semibold">蓝凌股份 · 国信证券 OA 战略项目</h3>
           <p class="text-gray-500 text-sm">2012.07 - 2016.08  |  项目经理/实施工程师  |  5 期迭代</p>
           <ul class="mt-2 space-y-1 text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
-            <li>担任国信证券 OA 项目负责人，主导 5 期系统迭代实施</li>
+            <li>担任国信证券 OA 项目经理，主导 5 期系统迭代实施</li>
             <li>覆盖流程、门户、知识管理、邮件等核心模块</li>
             <li>带领现场团队适配证券行业合规需求，客户满意度 95%+</li>
           </ul>
