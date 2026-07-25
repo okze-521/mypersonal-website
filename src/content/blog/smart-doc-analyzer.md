@@ -1,7 +1,7 @@
 ---
 title: 'Smart Doc Analyzer：111 条测试驱动的文档分析平台'
 description: '从 TDD 开始搭建，FastAPI + SQLite + Qdrant + sentence-transformers，一个纯本地、零 API 费用的智能文档分析工具。'
-pubDate: 2026-07-25
+pubDate: 2026-07-13
 tags: ['FastAPI', 'TDD', 'Docker', 'RAG', '文档分析']
 draft: false
 ---

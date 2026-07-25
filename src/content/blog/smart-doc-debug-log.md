@@ -1,7 +1,7 @@
 ---
 title: 'Smart Doc Analyzer 填坑日记：从 6 个 Bug 到 111 个全绿测试'
 description: '一次完整的 Docker 全链路调试实录：自动建表、Qdrant 版本兼容、BGE 模型切换、Embedding 维度对齐——四个"小问题"卡了两小时，每一条都是工程教训。'
-pubDate: 2026-07-24
+pubDate: 2026-07-22
 tags: ['Docker', 'Qdrant', 'FastAPI', 'RAG', '调试', '工程实践']
 draft: false
 ---

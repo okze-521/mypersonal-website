@@ -1,7 +1,7 @@
 ---
 title: 'RAG 进化三部曲：一个运维老兵的 AI 实战之路'
 description: '从 Ollama 试水到存算分离企业级 RAG 平台，三个项目、半年时间、56 条测试用例，完整记录我的技术转型历程。'
-pubDate: 2026-07-24
+pubDate: 2026-07-19
 tags: ['RAG', 'Ollama', 'Qdrant', 'AI', '转型']
 draft: false
 ---
