@@ -34,7 +34,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             { name: '鸿蒙开发', desc: 'ArkTS + ArkUI，独立 App 从零到上架华为应用市场全流程' },
             { name: '前端开发', desc: 'Vue 3 / TypeScript / Tailwind CSS / Astro' },
             { name: '后端开发', desc: 'Python / FastAPI / Java / Spring Boot，RESTful API 设计与开发' },
-            { name: '本地 LLM 部署', desc: 'Ollama 本地推理，MoE 模型 (qwen3.6:35b)，GPU 资源管理' },
+            { name: '本地 LLM + 视觉', desc: 'Ollama 本地推理 + 图片识别，本地视觉模型处理敏感图片不上云，云端 DeepSeek 做复杂推理——双模型协同，成本可控' },
           ].map(item => (
             <div class="w-full md:w-[calc(50%-0.5rem)] bg-gray-50 dark:bg-slate-800 rounded-xl p-4">
               <h3 class="font-semibold text-blue-600 dark:text-blue-400">{item.name}</h3>
@@ -85,7 +85,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li>支持 PDF/DOCX/XLSX 多格式解析、语义边界切片、RAG 向量检索问答</li>
             <li>文档对比 (difflib+LLM) + 自动分类 (7 大类别，BGE 向量相似度)</li>
             <li>JWT 认证 + RBAC 权限 + 审计日志，完整企业级安全模型</li>
-            <li>LLM 默认本地 Ollama (<span class="text-orange-600">🔒 隐私保护</span>)，文档不上云</li>
+            <li>LLM 默认本地 Ollama + 视觉识别 (<span class="text-orange-600">🔒 隐私保护</span>)，截图直接识别不上云；复杂推理切云端 DeepSeek</li>
             <li><a href="https://github.com/okze-521/smart-doc-analyzer" class="text-blue-600 underline" target="_blank">GitHub 开源 →</a></li>
           </ul>
         </div>
