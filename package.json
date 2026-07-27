@@ -6,10 +6,13 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "npm run build && wrangler dev",
+    "astro": "astro",
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "12",
     "@astrojs/mdx": "^4.3.14",
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.3",
@@ -18,5 +21,8 @@
     "astro": "^5.18.2",
     "tailwindcss": "^4.1.4",
     "vue": "^3.5.39"
+  },
+  "devDependencies": {
+    "wrangler": "^4.114.0"
   }
 }
