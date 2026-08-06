@@ -28,7 +28,7 @@ export const projects: Project[] = [
     title: '好记 — 鸿蒙备忘录应用',
     description: '鸿蒙原生备忘录，支持语音转文字离线识别、深色模式，已提交华为应用市场审核',
     tags: ['HarmonyOS', 'ArkTS', 'CoreSpeechKit', '鸿蒙'],
-    featured: true,
+    featured: false,
     year: 2026,
   },
   // ── RAG 进化三部曲 ────────────────────────────────
