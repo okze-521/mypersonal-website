@@ -71,4 +71,12 @@ export const projects: Project[] = [
     featured: true,
     year: 2026,
   },
+  {
+    id: 'oa-excel-analyzer',
+    title: 'OA Excel 智能分析 Agent',
+    description: '真正的 AI Agent 应用 — 上传 Excel 用自然语言提问，Agent 自动调用 12 个分析工具（筛选/聚合/透视/异常检测等），支持云端 API / 本地 Ollama / 离线规则三种模式，Docker 一键部署，53 项自动化测试',
+    tags: ['AI Agent', 'FastAPI', 'Pandas', 'Function Calling', 'Ollama', 'Docker'],
+    featured: true,
+    year: 2026,
+  },
 ];
