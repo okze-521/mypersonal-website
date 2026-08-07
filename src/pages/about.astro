@@ -14,7 +14,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="text-gray-600 dark:text-gray-400 mt-1">AI 应用工程师 / 企业智能化落地</p>
         <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">📱 13923749238  ·  📧 3239685@qq.com  ·  📍 深圳南山</p>
         <p class="mt-4 text-gray-700 dark:text-gray-300 leading-relaxed">
-          16 年企业数字化深耕，从 OA 实施到万级用户系统运维，近 2 年深入 AI Agent 实战开发。
+          16 年企业数字化深耕，从 OA 实施到万级用户系统运维，近 2 年深入 AI Agent 实战开发（具备手写 Agent 循环能力，不依赖框架）。
           熟练使用 AI Agent 进行编码、调试、部署，独立交付鸿蒙原生应用并通过华为应用市场审核。
           前端 Vue/ArkUI + 后端 Java/Spring Boot + 移动端鸿蒙 + 运维 Linux，一个人能从需求分析干到上线。
         </p>
@@ -27,7 +27,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="space-y-4">
         <div class="flex flex-wrap gap-2">
           {[
-            { name: 'AI Agent 开发', desc: 'Hermes Agent / Claude Code / Trae，全流程 AI 辅助开发，Prompt Engineering，Multi-Agent 协作' },
+            { name: 'AI Agent 开发', desc: 'Hermes Agent / Claude Code，具备手写 Agent 循环能力（Function Calling + 工具调用回馈），Multi-Agent 协作' },
             { name: 'RAG 系统工程', desc: 'FastAPI + LangChain + Qdrant + Ollama，存算分离架构，BGE-Reranker 精排' },
             { name: 'Python 工程化', desc: 'async/await 异步编程，pytest TDD 测试驱动，uv 包管理，111 tests · 89% 覆盖率' },
             { name: 'MLOps 工具链', desc: 'Docker Compose 服务编排，Qdrant 向量数据库运维，ModelScope 模型管理' },
@@ -97,6 +97,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <ul class="mt-2 space-y-1 text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
             <li>从零搭建个人博客与作品集站点</li>
             <li>GitHub Actions 自动构建 + EdgeOne Pages 部署</li>
+          </ul>
+        </div>
+
+        <!-- OA Excel Agent -->
+        <div class="border-l-4 border-teal-500 pl-4">
+          <h3 class="text-xl font-semibold">OA Excel 智能分析 Agent — 从零手写 Agent 循环</h3>
+          <p class="text-gray-500 text-sm mt-1">FastAPI · Pandas · Function Calling · Ollama · Docker</p>
+          <ul class="mt-2 space-y-1 text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
+            <li>从零手写 Agent 循环：while 循环 + 消息列表拼接 + 工具调用回馈，不依赖 LangChain 等框架</li>
+            <li>12 个分析工具：filter / aggregate / group / pivot / value_counts / outliers 等，覆盖全场景</li>
+            <li>LLM 三模式工厂：云端 API / 本地 Ollama / 离线规则模式，自动降级容错</li>
+            <li>Agent 工程特性：重复调用检测、预算管理、字段名容错匹配、错误自纠正、Token 用量统计</li>
           </ul>
         </div>
       </div>
